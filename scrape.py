@@ -163,8 +163,10 @@ for page in pages:
         }
     }
 
+    # add the record to the geojson feature collection
     geojson['features'].append(d)
 
+    # drop a copy of this data (w/ coords) in the csv list
     data_for_csv = props.copy()
     data_for_csv['latitude'] = lat
     data_for_csv['longitude'] = lng
